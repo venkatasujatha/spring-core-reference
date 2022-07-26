@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean name="aref" class="com.example.demo.ref.A">
+        <property name="x" value="90">
+        </property>
+        <property name="object">
+        <ref bean="bref"/>
+        
+        </property>
+        </bean>
+        
+        <bean name="bref" class="com.example.demo.ref.B">
+        
+        <property name="y" value="12"></property>
+        
+        </bean>
+        
+
+     </beans>
